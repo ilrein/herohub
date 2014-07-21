@@ -3,7 +3,17 @@
   <div class='smedia'><%= semantic_icon('facebook basic') %></div>
   <div class='smedia'><%= semantic_icon('twitter basic') %></div>
 </div>
+
 <div class='secondary_header'>
-  <div class='item'>Rescue Services</div>
-  <div class='item'>Contact</div>
+  <div class="ui three column grid">
+    <div class="column">
+      <div class='item'><%= link_to 'Rescue Services', pages_index_path %></div>
+    </div>
+    <div class="column">
+     <div class='item'><%= link_to 'Contact', new_user_session_path %></div>
+    </div>
+    <div class="right floated column">
+      <div class='item sign'><%= link_to 'Sign in', new_user_session_path %> | <%= link_to 'Register', new_user_registration_path %></div>
+    </div>
+  </div>
 </div>

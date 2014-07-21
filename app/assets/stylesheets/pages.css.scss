@@ -9,10 +9,12 @@
 }
 
 .secondary_header {
-  height:3em;
+  height:100%;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
   color:black;
   background-color: #F5EB7F;
-  width:100%;
   float:left;
 }
 
@@ -22,9 +24,9 @@
 
 .item {
   font-size: 1.2em;
-  float:left;
   padding-top: 0.5em;
-  padding-right: 2em;
+  display:inline-block;
+  text-align: center;
 }
 
 .smedia {

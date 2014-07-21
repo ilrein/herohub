@@ -5,14 +5,12 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link  href="http://fotorama.s3.amazonaws.com/4.5.2/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <link href="http://fotorama.s3.amazonaws.com/4.5.2/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
   <script src="http://fotorama.s3.amazonaws.com/4.5.2/fotorama.js"></script> <!-- 16 KB -->
   <%= csrf_meta_tags %>
-  <%= render 'navbar.html.erb' %>
+  <%= render 'pages/navbar.html.erb' %>
 </head>
 <body>
-
   <%= yield %>
-
 </body>
 </html>
