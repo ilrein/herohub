@@ -1,0 +1,32 @@
+@import "semantic-ui";
+
+.initial_header {
+  width:100%;
+  color:#D0D9D2;
+  background-color:#000000;
+  padding: 0.2em;
+  float:left;
+}
+
+.secondary_header {
+  height:3em;
+  color:black;
+  background-color: #F5EB7F;
+  width:100%;
+  float:left;
+}
+
+.logo {
+  float:left;
+}
+
+.item {
+  font-size: 1.2em;
+  float:left;
+  padding-top: 0.5em;
+  padding-right: 2em;
+}
+
+.smedia {
+  float:right;
+}
