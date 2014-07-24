@@ -1,0 +1,8 @@
+<div class='ui button mini'><%= semantic_icon('archive') %> <p class='whisper'>All Items</p>
+</div>
+<p class='shout'>The Order List</p>
+<div class='ui segment thin'>
+	<% @products.each do |product| %>
+	<%= product.name %><br>
+	<% end %>
+</div>
