@@ -1,10 +1,5 @@
 class ProductsController < ApplicationController
-before_action :authenticate_user!
-  def index
-  	@products = Product.all
-  end
-
-  def show
+  def new
   end
 
   def create
@@ -13,10 +8,15 @@ before_action :authenticate_user!
   def update
   end
 
+  def edit
+  end
+
   def destroy
   end
 
-  def order_list
+  def index
+  end
 
+  def show
   end
 end
