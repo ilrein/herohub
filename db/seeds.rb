@@ -5,7 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+companies = Company.create([
+		{name: 'Gameshack'}
+	])
+locations = Location.create([
+		{address: '595 Bay St', company_id: 1}
+	])
 products = Product.create([
 		{name: 'Battlefield 4'}, {name: 'Mario Kingdom'}, {name: 'Sonic the Hedgehog'} 
 	])

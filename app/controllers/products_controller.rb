@@ -4,6 +4,9 @@ before_action :authenticate_user!
   	@products = Product.all
   end
 
+  def show
+  end
+
   def create
   end
 
@@ -11,5 +14,9 @@ before_action :authenticate_user!
   end
 
   def destroy
+  end
+
+  def order_list
+
   end
 end

@@ -1,8 +1,14 @@
-<div class='ui button mini'><%= semantic_icon('archive') %> <p class='whisper'>All Items</p>
+<br><br>
+<div class='ui segment'>
+<% @products.each do |product| %>
+	<div class='product'><%= product.name %></div><br>
+<% end %>
 </div>
-<p class='shout'>The Order List</p>
-<div class='ui segment thin'>
-	<% @products.each do |product| %>
-	<%= product.name %><br>
-	<% end %>
-</div>
+
+<script>
+$document.ready(function(){
+	$('.product').on('click', function(){
+		
+	});
+});
+</script>

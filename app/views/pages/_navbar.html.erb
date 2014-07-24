@@ -6,7 +6,10 @@
 
   <div class='smedia logo'><%= semantic_icon('facebook basic') %></div>
   <div class='smedia logo'><%= semantic_icon('twitter basic') %></div>
-  <div class='smedia logo'><%= current_user.email %></div>
+  <div class='smedia logo'>
+    <% if current_user %> <%= current_user.email %>
+    <% end %>
+  </div>
 
 
 <div class="ui red vertical demo sidebar menu">
@@ -16,7 +19,7 @@
   </div>
   <div class="item">
     <%= semantic_icon('table') %>
-    <%= link_to("Order List", products_index_path) %>
+    <%= link_to("Order List", products_order_list_path) %>
   </div>
 </div>
 </div>
