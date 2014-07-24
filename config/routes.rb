@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'order_lists/index'
+
   get 'products/new'
 
   get 'products/create'
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  get 'products/show'
+  get 'products/show/:id', to: 'products#show', as: 'product'
 
   get 'companies/index'
 

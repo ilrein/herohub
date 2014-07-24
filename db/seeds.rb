@@ -14,3 +14,5 @@ locations = Location.create([
 products = Product.create([
 		{name: 'Battlefield 4'}, {name: 'Mario Kingdom'}, {name: 'Sonic the Hedgehog'} 
 	])
+
+orderlist = OrderList.create
