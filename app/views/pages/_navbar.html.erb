@@ -7,7 +7,8 @@
   <div class='smedia logo'><%= semantic_icon('facebook basic') %></div>
   <div class='smedia logo'><%= semantic_icon('twitter basic') %></div>
   <div class='smedia logo'>
-    <% if current_user %> <%= current_user.email %>
+    <% if current_user %> 
+      <%= current_user.email %>
     <% end %>
   </div>
 
