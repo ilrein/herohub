@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+    #@order = Order.new(params[:])
   end
 
   def update

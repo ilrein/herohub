@@ -12,7 +12,6 @@
     <% end %>
   </div>
 
-
 <div class="ui red vertical demo sidebar menu">
   <div class="item">
     <%= semantic_icon('cloud') %>
@@ -20,15 +19,15 @@
   </div>
   <div class="item">
     <%= semantic_icon('table') %>
-    <%= link_to("Order List", order_lists_index_path) %>
+    <%= link_to("Order List", orders_index_path) %>
+  </div>
+  <div class="item">
+    <%= semantic_icon('table') %>
+    <%= link_to("Stores/Locations", locations_index_path) %>
+  </div>
+  <div class="item">
+    <%= semantic_icon('table') %>
+    <%= link_to("Products/Inventory", products_index_path) %>
   </div>
 </div>
 </div>
-<script>
-$(document).ready(function(){
-  $(".ui.icon.button").on('click', function(){
-  $('.demo.sidebar').sidebar('toggle');
-})
-});
-
-</script>

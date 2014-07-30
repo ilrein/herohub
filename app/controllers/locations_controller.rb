@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   def index
+    @locations = Location.where(current_user.company)
   end
 
   def create
