@@ -29,6 +29,10 @@ ready = function() {
 
   $(document).on('click', '.orderUp', function(e){
     e.preventDefault();
+
+    // fire another ajax request to POST order data
+
+  
   });
 
 }
