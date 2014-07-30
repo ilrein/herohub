@@ -59,9 +59,10 @@ ready = function() {
 
     $(document).on('click', '.saveOrder', function(e){
       e.preventDefault();
-      var myorder = new Order(id, 1);
-      //console.log(myorder);
-      $('.small.modal').modal('hide');
+      
+      // var myorder = new Order(id, 1);
+      // console.log(myorder);
+      // $('.small.modal').modal('hide');
     });
 
   });
