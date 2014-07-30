@@ -18,6 +18,17 @@ ready = function() {
     console.log(id);
   });
 
+  //ajax call to generate list of all products on click
+
+  $('.allItems').on('click', function(){
+    $.ajax({
+      type: 'GET',
+      url: '/products/index'
+    }).done(function(data){
+      $('.allOrders').html(data);
+    });
+  });
+
 }
 
 $(document).ready(ready);
