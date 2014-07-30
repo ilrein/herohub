@@ -17,6 +17,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+
+    if request.xhr?
+      render :partial => 'product'
+    end
   end
 
   def show

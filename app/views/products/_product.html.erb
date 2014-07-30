@@ -1,0 +1,12 @@
+<% @products.each do |product| %>
+<div class='ui segment product_instance'>
+<%= link_to root_url, :class =>'orderUp' do %>
+  <div class='ui button mini'>
+    Order 
+  </div>
+<% end %>
+  <%= link_to product.name, product_path(product) %></div>
+</div>
+<div class='nullSpot'>
+</div>
+<% end %>
