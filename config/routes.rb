@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'orders/index'
-
+  #post '/products/show/'
   get 'locations/index'
 
   get 'locations/create'

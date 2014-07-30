@@ -1,0 +1,10 @@
+<div class='ui segment'> 
+<%= @product.id %> | <%= @product.name %>
+<%= form_for @order do |f| %>
+  Item: <%= f.text_field :product_id, :placeholder => @product.id %><br>
+  Quantity: <%= f.text_field :quantity %><br>
+  <div class='orderup'>
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

@@ -12,7 +12,11 @@ ready = function() {
     var id = $(this).attr('data-id');
     console.log(id);
   });
-
+  $('.appendme').on('click', function(){
+    $.ajax({
+      //url: "orders/index"
+    });
+  });
 };
 
 $(document).ready(ready);
