@@ -1,10 +1,6 @@
 var ready;
 ready = function() {
 
-  function Order(){
-    return true;
-  }
-
   //slide the sidebar on click
 
   $(".ui.icon.button.mini.yoshi").on('click', function(){
@@ -27,6 +23,12 @@ ready = function() {
     }).done(function(data){
       $('.allOrders').html(data);
     });
+  });
+
+  // prevent default on orderUp by defining this high up in the DOM tree
+
+  $(document).on('click', '.orderUp', function(e){
+    e.preventDefault();
   });
 
 }
