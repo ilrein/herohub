@@ -22,5 +22,3 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:product_id, :quantity)
   end
 end
-
-#ActiveRecord::Base.connection.execute("DELETE from sqlite_sequence where name = 'orders'")
