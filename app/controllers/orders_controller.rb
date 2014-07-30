@@ -3,10 +3,9 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
   def create
-    @order = Order.create(params[:order])
-
+      @order = Order.create(params[:order])
     if request.xhr?
-      render :partial => 'order'
+      @order = Order.create(params[:order])
     end
   end
   private

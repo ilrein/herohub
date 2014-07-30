@@ -1,14 +1,19 @@
 var ready;
 
+function Order(item, quantity) {
+  this.item = item;
+  this.quantity = quantity;
+}
+
 getProducts = function() {
 
   //ajax to GET all products
   $.ajax({
    type: 'GET',
    url: '/products/index'
-  }).done(function(data){
-    $('.allOrders').html(data);
-  });
+ }).done(function(data){
+  $('.allOrders').html(data);
+});
 }
 
 getOrders = function(picked) {
@@ -49,15 +54,18 @@ ready = function() {
 
   $(document).on('click', '.orderUp', function(e){
     e.preventDefault();
-    var picked = $(this);
-    getOrders(picked);
+    var id = $(this).data('id');
+    $('.small.modal').modal('show');
+
+    $(document).on('click', '.saveOrder', function(e){
+      e.preventDefault();
+      var myorder = new Order(id, 1);
+      //console.log(myorder);
+      $('.small.modal').modal('hide');
+    });
+
   });
 
-  // prevent default on Save Order
-
-  $(document).on('click', '.saveOrder', function(e){
-    //e.preventDefault();
-  });
 
 
 }
