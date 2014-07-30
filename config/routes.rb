@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'orders/index'
+  get 'orders/show/:id', to: 'orders#show', as: 'order'
   get 'orders/create'
   post 'orders/create'
+
 
   get 'locations/index'
 
@@ -13,7 +15,6 @@ Rails.application.routes.draw do
 
   get 'locations/show'
 
-  get 'order_lists/index'
 
   get 'products/new'
 

@@ -1,8 +1,8 @@
 <% @products.each do |product| %>
 <div class='ui segment product_instance'>
-  <%= link_to root_url do %>
+  <%= link_to orders_create_path(product, :product_id => product.id, :quantity => 1) do %>
   <div data-id="<%= product.id %>" class='orderUp ui button mini'>
-    Order 
+    +1 
   </div>
   <% end %>
   <%= link_to product.name, product_path(product) %>

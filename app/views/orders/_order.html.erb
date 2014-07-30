@@ -1,8 +1,7 @@
-<br>
+<br><br>
 <div class='ui segment'>
-  <%= form_for :order, url: {:controller => "orders", :action => 'create'}, :remote => true, html: { class: 'saveOrderForm' } do |f| %>
-  <%= f.label :quantity %>
-  <%= f.text_field :quantity, :placeholder => '1' %><br>
-  <%= f.submit :class => 'saveOrder' %>
-  <% end %>
+  Added to shopping cart!
+  <div class='ui button mini floated right OK'>
+    ok!
+  </div>
 </div>

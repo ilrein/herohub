@@ -1,10 +1,15 @@
 <h1>Orders#index</h1>
+<%= link_to products_index_path do %>
 <div class='ui button mini allItems'>
   All Items
 </div>
-<div class='ui segment allOrders'>
+<% end %>
 
- <% @orders.each do |order| %>
-  <%= order.id %>
- <% end %>
+
+<% @orders.each do |order| %>
+<div class='ui segment allOrders'>
+  Order id: <%= order.id %><br>
+  Order quantity: <%= order.quantity %><br>
+  Product id: <%= order.product_id %><br>
 </div>
+<% end %>
