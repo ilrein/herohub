@@ -1,0 +1,10 @@
+<br>
+<div class='ui segment'>
+<%= form_for :order, :remote => true, html: { class: 'saveOrder' } do |f| %>
+  <%= f.label :product_id %>
+  <%= f.text_field :product_id, :placeholder => 'Stock No' %><br>
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity, :placeholder => '1' %><br>
+  <%= f.submit %>
+<% end %>
+</div>
