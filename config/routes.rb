@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   get 'orders/index'
-<<<<<<< HEAD
-  #post '/products/show/'
-=======
   get 'orders/create'
 
->>>>>>> d4461b4bb8396f5e7237935c86b413f36d1e7d88
   get 'locations/index'
 
   get 'locations/create'
