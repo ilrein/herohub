@@ -1,0 +1,10 @@
+<h1>Orders#index</h1>
+<div class='ui segment'>
+<% if @orders.nil? %>
+  No orders
+<% end %>
+
+ <% @orders.each do |order| %>
+  <%= order.id %>
+ <% end %>
+</div>

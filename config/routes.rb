@@ -1,4 +1,42 @@
 Rails.application.routes.draw do
+  get 'orders/index'
+
+  get 'locations/index'
+
+  get 'locations/create'
+
+  get 'locations/update'
+
+  get 'locations/destroy'
+
+  get 'locations/show'
+
+  get 'order_lists/index'
+
+  get 'products/new'
+
+  get 'products/create'
+
+  get 'products/update'
+
+  get 'products/edit'
+
+  get 'products/destroy'
+
+  get 'products/index'
+
+  get 'products/show/:id', to: 'products#show', as: 'product'
+
+  get 'companies/index'
+
+  get 'companies/create'
+
+  get 'companies/show'
+
+  get 'companies/destroy'
+
+  get 'products/order_list'
+
   devise_for :users
   root 'pages#index'
   get 'pages/index'

@@ -1,0 +1,7 @@
+<br><br>
+
+<% @products.each do |product| %>
+<div class='ui segment product_instance'>  
+  <%= link_to product.name, product_path(product) %></div>
+</div>
+<% end %>

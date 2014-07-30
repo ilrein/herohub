@@ -1,0 +1,11 @@
+<h1>Locations#index</h1>
+<%= link_to locations_create_path do %>
+<div class='ui mini button'>
+	Add new location
+</div>
+<% end %>
+<div class='ui segment'>
+<% @locations.each do |location| %>
+	<%= location.address %><br>
+<% end %>
+</div>

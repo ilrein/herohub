@@ -1,19 +1,33 @@
 <div class='initial_header'>
-  <div class='logo'>HeroHub</div>
-  <div class='smedia'><%= semantic_icon('facebook basic') %></div>
-  <div class='smedia'><%= semantic_icon('twitter basic') %></div>
+<div class='ui icon button mini yoshi'>
+	<%= semantic_icon('cloud') %>
 </div>
+  <div class='logo'>ItemShoppe</div>
 
-<div class='secondary_header'>
-  <div class="ui three column grid">
-    <div class="column">
-      <div class='item'><%= link_to 'Rescue Services', pages_index_path %></div>
-    </div>
-    <div class="column">
-     <div class='item'><%= link_to 'Contact', new_user_session_path %></div>
-    </div>
-    <div class="right floated column">
-      <div class='item sign'><%= link_to 'Sign in', new_user_session_path %> | <%= link_to 'Register', new_user_registration_path %></div>
-    </div>
+  <div class='smedia logo'><%= semantic_icon('facebook basic') %></div>
+  <div class='smedia logo'><%= semantic_icon('twitter basic') %></div>
+  <div class='smedia logo'>
+    <% if current_user %> 
+      <%= current_user.email %>
+    <% end %>
   </div>
+
+<div class="ui red vertical demo sidebar menu">
+  <div class="item">
+    <%= semantic_icon('cloud') %>
+    <%= link_to("Log In", root_url) %>
+  </div>
+  <div class="item">
+    <%= semantic_icon('table') %>
+    <%= link_to("Order List", orders_index_path) %>
+  </div>
+  <div class="item">
+    <%= semantic_icon('table') %>
+    <%= link_to("Stores/Locations", locations_index_path) %>
+  </div>
+  <div class="item">
+    <%= semantic_icon('table') %>
+    <%= link_to("Products/Inventory", products_index_path) %>
+  </div>
+</div>
 </div>
