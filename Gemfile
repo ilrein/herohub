@@ -17,6 +17,8 @@ gem 'jquery-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 gem 'devise'
+gem "nested_form"
+
 gem 'semantic-ui-sass', '~> 0.16.1.0'
 gem 'quiet_assets'
 

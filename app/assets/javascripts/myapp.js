@@ -10,6 +10,16 @@ addToList = function() {
 
 }
 
+getAllProducts = function() {
+  $.ajax({
+    url: '/products/index'
+  }).done(function(data) {
+    console.log('done');
+    $('.theBody').html(data);
+  });
+}
+
+
 ready = function() {
 
   //slide the sidebar on click
@@ -17,11 +27,11 @@ ready = function() {
   $(".ui.icon.button.mini.yoshi").on('click', function(){
     $('.demo.sidebar').sidebar('toggle');
   })
-
   
-  // $(document).on('click', '.OK', function(){
-    
-  // });
+  $(document).on('click', '.preventme', function(e){
+    e.preventDefault();
+      getAllProducts();
+  });
 
 }
 

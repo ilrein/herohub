@@ -13,6 +13,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery_nested_form
 //= require semantic-ui
 //= require turbolinks
 //= require_tree .
