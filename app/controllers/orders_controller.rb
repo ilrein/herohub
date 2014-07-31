@@ -2,6 +2,10 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all
   end
+  def new
+    @supplier = Supplier.new
+    @order = Order.new
+  end
   def create
       pid = params[:product_id].to_i
       quantity = params[:quantity].to_i

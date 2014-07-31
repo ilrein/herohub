@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  
   get 'orders/index'
   get 'orders/show/:id', to: 'orders#show', as: 'order'
   get 'orders/create'
   post 'orders/create'
-
+  get 'orders/new'
+  resources :suppliers, :controller => "orders"
 
   get 'locations/index'
 

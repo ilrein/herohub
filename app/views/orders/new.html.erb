@@ -1,0 +1,19 @@
+<br><br>
+<div class='ui segment'>
+Add a new supplier
+<%= form_for @supplier do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.submit %>
+<% end %>
+</div>
+<div class='ui segment'>
+Send an order
+<%= form_for :order do |f| %>
+  <%= f.label :quantity %>:
+  <%= f.text_field :quantity %><br />
+
+  <%= f.submit %>
+<% end %>
+</div>
