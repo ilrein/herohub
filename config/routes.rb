@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   resources :suppliers, :controller => "orders"
 
   get 'locations/index'
+  get 'locations/new'
 
-  get 'locations/create'
+  post 'locations/create'
 
   get 'locations/update'
 

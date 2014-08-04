@@ -9,7 +9,7 @@
 </div>
 <div class='ui segment'>
   <div class='title'>Create a Purchase Order</div>
-  <%= nested_form_for @po, method: :post, :controller => 'orders' do |f| %>
+  <%= nested_form_for @po do |f| %>
   <%= f.label :supplier_id %>
   <%= f.text_field :supplier_id %>
   <%= f.fields_for :orders do |order_form| %>

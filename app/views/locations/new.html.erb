@@ -1,0 +1,10 @@
+<br><br>
+<h1 class='title'>Add a new location</h1>
+
+<div class='ui segment'>
+  <%= form_for @location, url: locations_create_path do |f| %>
+  <%= f.label :address %>:
+  <%= f.text_field :address %><br />
+  <%= f.submit %>
+  <% end %>
+</div>
