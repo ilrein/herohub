@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'orders/create'
   post 'orders/create'
   get 'orders/new'
+  resources :pos, :controller => 'orders'
   resources :suppliers, :controller => "orders"
 
   get 'locations/index'

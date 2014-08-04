@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   def new
     @supplier = Supplier.new
     @order = Order.new
+    @po = Po.new
   end
   def create
       pid = params[:product_id].to_i

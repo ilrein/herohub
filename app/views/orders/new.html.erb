@@ -4,21 +4,20 @@
   <%= form_for @supplier do |f| %>
   <%= f.label :name %>:
   <%= f.text_field :name %><br />
-
   <%= f.submit %>
   <% end %>
 </div>
 <div class='ui segment'>
   Send an order
-  <%= form_for :order do |f| %>
-
-  <%= f.label :supplier_id %>:
-  <%= f.text_field :supplier_id %><br />
-
+  <%= nested_form_for @po do |f| %>
+  <%= f.fields_for :orders do |order_form| %>
+  Product id: <%= order_form.text_field :product_id %><br>
+  Quantity: <%= order_form.text_field :quantity %>
+  <% end %>
+  <p><%= f.link_to_add "Add an order", :orders %></p>
+  
   <div class='preventme'>
     <%= f.submit %>
   </div>
   <% end %>
-</div>
-<div class='ui segment theBody'>
 </div>
