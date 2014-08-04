@@ -8,16 +8,17 @@
   <% end %>
 </div>
 <div class='ui segment'>
-  Send an order
+  <div class='title'>Create a Purchase Order</div>
   <%= nested_form_for @po do |f| %>
   <%= f.fields_for :orders do |order_form| %>
   Product id: <%= order_form.text_field :product_id %><br>
   Quantity: <%= order_form.text_field :quantity %>
   <% end %>
-  <p><%= f.link_to_add "Add an order", :orders %></p>
-  
+  <div class='colorme'>
+    <p class='bold'><%= f.link_to_add "Add an order", :orders %></p>
+  </div>
   <div class='preventme'>
-    <%= f.submit %>
+    <%= f.submit 'Save PO' %>
   </div>
   <% end %>
 </div>
