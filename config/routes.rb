@@ -40,8 +40,6 @@ Rails.application.routes.draw do
 
   get 'companies/destroy'
 
-  get 'products/order_list'
-
   devise_for :users
   root 'pages#index'
   get 'pages/index'

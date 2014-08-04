@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731211459) do
+ActiveRecord::Schema.define(version: 20140730190856) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20140731211459) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "supplier_id"
   end
 
   create_table "products", force: true do |t|
@@ -41,7 +40,6 @@ ActiveRecord::Schema.define(version: 20140731211459) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "orderlist_id"
-    t.integer  "instanceAmount"
   end
 
   create_table "suppliers", force: true do |t|
