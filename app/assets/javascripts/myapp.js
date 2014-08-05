@@ -19,8 +19,24 @@ getAllProducts = function() {
   });
 }
 
+getAllTooltips = function() {
+  $('.orderUp').qtip({
+    content: 'Generate a new order with +1 of this item',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('.allItems').qtip({
+    content: 'Check the master list of all items',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+}
 
 ready = function() {
+
+  getAllTooltips();  
 
   //slide the sidebar on click
 
@@ -30,7 +46,7 @@ ready = function() {
   
   $(document).on('click', '.preventme', function(e){
     e.preventDefault();
-      getAllProducts();
+    getAllProducts();
   });
 
 }

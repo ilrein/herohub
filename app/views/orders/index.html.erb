@@ -9,7 +9,8 @@
 <% @orders.each do |order| %>
 <div class='ui segment allOrders'>
   Order id: <%= order.id %><br>
-  Order quantity: <%= order.quantity %><br>
-  Product id: <%= order.product_id %><br>
+  pid: <%= order.product_id %><br>
+  Product: <%= order.my_product(order.product_id) %><br>
+  Quantity: <%= order.quantity %><br>
 </div>
 <% end %>
