@@ -8,7 +8,9 @@
 
 <% @orders.each do |order| %>
 <div class='ui segment allOrders'>
-  Order id: <%= order.id %><br>
+  <%= link_to order_path(order) do %> 
+   Order id: <%= order.id %><br>
+  <% end %>
   Order quantity: <%= order.quantity %><br>
   Product id: <%= order.product_id %><br>
 </div>
