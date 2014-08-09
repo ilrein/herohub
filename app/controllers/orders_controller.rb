@@ -7,13 +7,8 @@ class OrdersController < ApplicationController
     @po = Po.new
   end
   def create
-      #pid = params[:product_id].to_i
-      #quantity = params[:quantity].to_i
-      
-      @po = Po.new(order_params)
 
-
-     binding.pry
+    @po = Po.new(order_params)
       if @po.save
         redirect_to root_url
       else
