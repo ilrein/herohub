@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
-  def pos
+  def po
     @pos = Po.all
   end
   private

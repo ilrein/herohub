@@ -12,12 +12,16 @@ activeItem = function() {
     $('#locations_list').addClass('active');
   };
 
+  if (pathname == '/products/index') {
+    $('#products_list').addClass('active');
+  };
+
   if (pathname == '/') {
     $('#login').addClass('active');
   };
 
   if (pathname == '/orders/new') {
-    $('#products_list').addClass('active');
+    $('#place_single_order').addClass('active');
   };
 
   if (pathname == '/pos') {

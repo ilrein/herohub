@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'orders/index'
   get 'orders/show/:id', to: 'orders#show', as: 'order'
   get 'orders/create'
+  get 'orders/po'
   post 'orders/create'
   get 'orders/new'
   resources :pos, :controller => 'orders'
