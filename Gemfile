@@ -6,7 +6,10 @@ gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 #em 'sqlite3'
 gem 'pg'
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'awesome_print'
+gem 'better_errors'
+gem 'pry-debugger'
 gem 'jquery-qtip2-rails'
 gem 'turbolinks'
 # Use SCSS for stylesheets
