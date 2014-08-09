@@ -4,8 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+#em 'sqlite3'
 gem 'pg'
+gem 'sqlite3'
+gem 'jquery-qtip2-rails'
 gem 'turbolinks'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -18,6 +20,8 @@ gem 'jquery-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 gem 'devise'
+gem "nested_form"
+
 gem 'semantic-ui-sass', '~> 0.16.1.0'
 gem 'quiet_assets'
 

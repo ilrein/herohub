@@ -10,18 +10,55 @@ addToList = function() {
 
 }
 
+getAllProducts = function() {
+  $.ajax({
+    url: '/products/index'
+  }).done(function(data) {
+    console.log('done');
+    $('.theBody').html(data);
+  });
+}
+
+getAllTooltips = function() {
+  $('.orderUp').qtip({
+    content: 'Generate a new order with +1 of this item',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('.allItems').qtip({
+    content: 'Check the master list of all items',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  checkMyId = function() {
+    var myId = $('.orderId').attr('id');
+    $('.orderId').qtip({
+    content: myId,
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+  }
+
+}
+
 ready = function() {
+
+  getAllTooltips();
+  checkMyId();  
 
   //slide the sidebar on click
 
   $(".ui.icon.button.mini.yoshi").on('click', function(){
     $('.demo.sidebar').sidebar('toggle');
   })
-
   
-  // $(document).on('click', '.OK', function(){
-    
-  // });
+  $(document).on('click', '.preventme', function(e){
+    e.preventDefault();
+    getAllProducts();
+    getAllTooltips();
+  });
 
 }
 

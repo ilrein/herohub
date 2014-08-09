@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  
   get 'orders/index'
   get 'orders/show/:id', to: 'orders#show', as: 'order'
   get 'orders/create'
   post 'orders/create'
-
+  get 'orders/new'
+  resources :pos, :controller => 'orders'
+  resources :suppliers, :controller => "orders"
 
   get 'locations/index'
+  get 'locations/new'
 
-  get 'locations/create'
+  post 'locations/create'
 
   get 'locations/update'
 
@@ -37,8 +41,6 @@ Rails.application.routes.draw do
   get 'companies/show'
 
   get 'companies/destroy'
-
-  get 'products/order_list'
 
   devise_for :users
   root 'pages#index'

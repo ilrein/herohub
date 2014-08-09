@@ -1,0 +1,24 @@
+<br><br>
+<div class='ui segment'>
+  Add a new supplier
+  <%= form_for @supplier do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+  <%= f.submit %>
+  <% end %>
+</div>
+<div class='ui segment'>
+  <div class='title'>Create a Purchase Order</div>
+  <%= nested_form_for @po do |f| %>
+  <%= f.label :supplier_id %>
+  <%= f.text_field :supplier_id %>
+  <%= f.fields_for :orders do |order_form| %>
+  Product id: <%= order_form.text_field :product_id %><br>
+  Quantity: <%= order_form.text_field :quantity %>
+  <% end %>
+  <div class='colorme'>
+    <p class='bold'><%= f.link_to_add "Add an order", :orders %></p>
+  </div>
+    <%= f.submit 'Save PO' %>
+  <% end %>
+</div>
