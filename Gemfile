@@ -10,6 +10,7 @@ gem 'pg'
 gem 'awesome_print'
 gem 'better_errors'
 gem 'pry-debugger'
+gem 'pry-doc'
 gem 'jquery-qtip2-rails'
 gem 'turbolinks'
 # Use SCSS for stylesheets

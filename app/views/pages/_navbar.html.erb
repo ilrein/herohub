@@ -11,30 +11,40 @@
   <%= current_user.email %>
   <% end %>
 </div>
+</div>
 
 <div class="ui red vertical demo sidebar menu">
-  <div class="item">
+  <div class="item" id='login'>
     <%= semantic_icon('cloud') %>
     <%= link_to("Log In", root_url) %>
   </div>
-  <div class="item">
+  <div class="item" id='wish_list'>
     <%= semantic_icon('payment') %>
     <%= link_to("Wish List", orders_index_path) %>
   </div>
-  <div class="item">
+  <div class="item" id='locations_list'>
     <%= semantic_icon('flag') %>
     <%= link_to("Stores/Locations", locations_index_path) %>
   </div>
-  <div class="item">
+  <div class="item" id='products_list'>
     <%= semantic_icon('barcode') %>
     <%= link_to("Products/Inventory", products_index_path) %>
   </div>
-  <div class="item">
-    <%= semantic_icon('table') %>
-    <%= link_to("Place Single Order", orders_new_path) %>
+  <div class='item'>
+  <p class='pretitle'>Purchase Orders</p><br>
+  <div class='menu'>
+    <div class="item" id='place_single_order'>
+      <%= semantic_icon('table') %>
+      <%= link_to("Place Single Order", orders_new_path) %>
+    </div>
+    <div class="item" id='all_pos'>
+      <%= semantic_icon('cart') %>
+      <%= link_to("All PO's", pos_path) %>
+    </div>
+    </div>
   </div>
 </div>
-</div>
+
 
 <div class="ui small modal">
   <%= render 'orders/order' %>

@@ -1,5 +1,30 @@
 var ready;
 
+activeItem = function() {
+  var pathname = window.location.pathname;
+  console.log(pathname);
+
+  if (pathname == '/orders/index') {
+    $('#wish_list').addClass('active');
+  };
+
+  if (pathname == '/locations/index') {
+    $('#locations_list').addClass('active');
+  };
+
+  if (pathname == '/') {
+    $('#login').addClass('active');
+  };
+
+  if (pathname == '/orders/new') {
+    $('#products_list').addClass('active');
+  };
+
+  if (pathname == '/pos') {
+    $('#all_pos').addClass('active');
+  };
+};
+
 addToList = function() {
 
   $('.orderUp').on('click', function(){
@@ -21,7 +46,7 @@ getAllProducts = function() {
 
 getAllTooltips = function() {
   $('.orderUp').qtip({
-    content: 'Generate a new order with +1 of this item',
+    content: 'Add +1 of this item to the wishlist',
     show: 'mouseover',
     hide: 'mouseout'
   });
@@ -33,20 +58,33 @@ getAllTooltips = function() {
   });
 
   checkMyId = function() {
+
     var myId = $('.orderId').attr('id');
+    var myId2 = $('.location').attr('id');
+
     $('.orderId').qtip({
-    content: myId,
-    show: 'mouseover',
-    hide: 'mouseout'
-  });
-  }
+      content: myId,
+      show: 'mouseover',
+      hide: 'mouseout'
+    });
+
+    $('.location').qtip({
+      content: myId2,
+      show: 'mouseover',
+      hide: 'mouseout'
+    });
+
+  };
+
+
 
 }
 
 ready = function() {
 
   getAllTooltips();
-  checkMyId();  
+  checkMyId(); 
+  activeItem(); 
 
   //slide the sidebar on click
 

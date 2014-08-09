@@ -6,6 +6,6 @@
 <% end %>
 <div class='ui segment'>
 <% @locations.each do |location| %>
-	<%= location.address %><br>
+	<div class='location' id='<%= location.id %>'><%= location.address %></div><br>
 <% end %>
 </div>
