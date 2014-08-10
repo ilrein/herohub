@@ -1,16 +1,15 @@
 <% @products.each do |product| %>
 <div class='ui segment product_instance'>
-  <%= link_to orders_create_path(product, :product_id => product.id, :quantity => 1) do %>
-  <div data-id="<%= product.id %>" class='orderUp ui button mini' title='Add 1 unit to wish list'>
-    +1 
-  </div>
-  <% end %>
-  <%= link_to product.name, product_path(product) %>
-  <div class='ui vertical divider'></div>
-  <div class='lesser_details'>
-    ID number: <%= product.id %>
-  </div>
+  <%= link_to product_path(product) do %>
+  <div data-id="<%= product.id %>" class='orderUp ui teal button mini' title='Add 1 unit to wish list'>
+   <%= semantic_icon('text file') %>
+ </div>
+ <% end %>
+ <%= product.name %> : 
+ <%= product.classification %>
+<div class='ui vertical divider'></div>
+<div class='lesser_details'>
+  ID number: <%= product.id %>
 </div>
-<div class='nullSpot'>
 </div>
 <% end %>

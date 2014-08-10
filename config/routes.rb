@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'products/new'
 
   get 'products/create'
+  post 'products/create'
 
   get 'products/update'
 

@@ -4,10 +4,6 @@ activeItem = function() {
   var pathname = window.location.pathname;
   console.log(pathname);
 
-  if (pathname == '/orders/index') {
-    $('#wish_list').addClass('active');
-  };
-
   if (pathname == '/locations/index') {
     $('#locations_list').addClass('active');
   };
@@ -50,13 +46,19 @@ getAllProducts = function() {
 
 getAllTooltips = function() {
   $('.orderUp').qtip({
-    content: 'Add +1 of this item to the wishlist',
+    content: 'Check out my details',
     show: 'mouseover',
     hide: 'mouseout'
   });
 
   $('.allItems').qtip({
     content: 'Check the master list of all items',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('.newProduct').qtip({
+    content: 'Add a new product',
     show: 'mouseover',
     hide: 'mouseout'
   });
