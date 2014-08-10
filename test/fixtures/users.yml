@@ -7,5 +7,6 @@
 one: 
   email: test@example.com
   encrypted_password: pw1
+  company_id: 1
 two: {}
 #  column: value

@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+before_action :authenticate_user!
+
   def index
     @locations = Location.where(current_user.company)
   end
@@ -9,6 +11,10 @@ class LocationsController < ApplicationController
 
   def create
     @company = Company.find_by current_user.company_id
+    if @company.nil?
+      @company.company_id = 1
+    end
+
     @location = Location.new(location_params)  
     if @location.save
       @location.update_column(:company_id, @company)

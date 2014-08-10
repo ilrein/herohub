@@ -48,25 +48,37 @@ getAllTooltips = function() {
   $('.orderUp').qtip({
     content: 'Check out my details',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-blue qtip-shadow'
+    }
   });
 
   $('.allItems').qtip({
     content: 'Check the master list of all items',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-blue qtip-shadow'
+    }
   });
 
   $('.newProduct').qtip({
     content: 'Add a new product',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-blue qtip-shadow'
+    }
   });
 
   $('.logoutButton').qtip({
     content: 'Logout!',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-blue qtip-shadow'
+    }
   });
 
   var ids = [];
@@ -74,19 +86,28 @@ getAllTooltips = function() {
   $('#barcode').qtip({
     content: 'Products',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-green qtip-shadow'
+    }
   });
 
   $('#cart').qtip({
     content: 'Locations',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-green qtip-shadow'
+    }
   });
 
   $('#flag').qtip({
     content: 'Purchase Orders',
     show: 'mouseover',
-    hide: 'mouseout'
+    hide: 'mouseout',
+    style: {
+      classes: 'qtip-green qtip-shadow'
+    }
   });
 
 

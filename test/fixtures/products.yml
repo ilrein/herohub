@@ -3,7 +3,9 @@
 one:
   name: MyString
   stocknum: 1
+  classification: SNES
 
 two:
-  name: MyString
-  stocknum: 1
+  name: MyString2
+  stocknum: 2
+  classification: SEGA

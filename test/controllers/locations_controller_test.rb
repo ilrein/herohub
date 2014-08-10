@@ -1,6 +1,17 @@
 require 'test_helper'
 
 class LocationsControllerTest < ActionController::TestCase
+
+  def setup
+    user = User.new
+    user.email = 'tester@debug.com'
+    user.password = '12345678'
+    user.password_confirmation = '12345678'
+
+    user.save!
+    sign_in user
+  end
+
   test "should get index" do
     get :index
     assert_response :success
