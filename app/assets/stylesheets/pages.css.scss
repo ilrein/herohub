@@ -2,62 +2,79 @@
 
 
 html {
-    a:link {color: #2787FF;text-decoration: none;}      /* unvisited link */
-    a:visited {color: #2787FF;text-decoration: none;}   /* visited link */
-    a:hover {color: #2787FF;text-decoration: none;}   /* mouse over link */
-    a:active {color: #2787FF;text-decoration: none;}    /* selected link */
+  a:link {color: #2787FF;text-decoration: none;}      /* unvisited link */
+  a:visited {color: #2787FF;text-decoration: none;}   /* visited link */
+  a:hover {color: #2787FF;text-decoration: none;}   /* mouse over link */
+  a:active {color: #2787FF;text-decoration: none;}    /* selected link */
 }
 .signup_options {
-    a:link {color: blue;text-decoration: none;}      /* unvisited link */
-    a:visited {color: blue;text-decoration: none;}   /* visited link */
-    a:hover {color: blue;text-decoration: none;}   /* mouse over link */
-    a:active {color: blue;text-decoration: none;}
+  a:link {color: blue;text-decoration: none;}      /* unvisited link */
+  a:visited {color: blue;text-decoration: none;}   /* visited link */
+  a:hover {color: blue;text-decoration: none;}   /* mouse over link */
+  a:active {color: blue;text-decoration: none;}
 }
+
+.ui.mini.button {
+ a:link {color: white;text-decoration: none;}      /* unvisited link */
+ a:visited {color: white;text-decoration: none;}   /* visited link */
+ a:hover {color: white;text-decoration: none;}   /* mouse over link */
+ a:active {color: white;text-decoration: none;}
+}
+
+
+
 .yoshi {
-    float: left;
+  float: left;
 }
 
 .initial_header {
-    width: 100%;
-    color: #D0D9D2;
-    background-color: #000000;
-    padding: 0.2em;
-    float: left;
-    .logo {
-        padding-top: 0.5em;
-        padding-left: 0.2em;
-        padding-right: 0.1em;
-    }
+  width: 100%;
+  color: #D0D9D2;
+  background-color: #000000;
+  padding: 0.2em;
+  float: left;
+  .logo {
+    padding-top: 0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.1em;
+  }
 }
 
 .secondary_header {
-    height: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    background-color: #F5EB7F;
-    float: left;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  background-color: #F5EB7F;
+  float: left;
 }
 
 .logo {
-    float: left;
+  float: left;
 }
 
 .item {
-    font-size: 1.2em;
-    padding-top: 0.5em;
-    display: inline-block;
-    text-align: center;
+  font-size: 1.2em;
+  padding-top: 0.5em;
+  display: inline-block;
+  text-align: center;
 }
 
 .smedia {
-    float: right;
+  float: right;
+  .logoutbutton {}
 }
 
 .thin {
-    text-decoration: none;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  text-decoration: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.pretitle {
+  float: left;
+  font-weight: bold;
+}
+

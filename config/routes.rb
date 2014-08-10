@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   get 'orders/index'
   get 'orders/show/:id', to: 'orders#show', as: 'order'
   get 'orders/create'
+  get 'orders/po'
   post 'orders/create'
   get 'orders/new'
   resources :pos, :controller => 'orders'
-  resources :suppliers, :controller => "orders"
+  #resources :suppliers, :controller => "orders"
 
   get 'locations/index'
   get 'locations/new'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   get 'products/new'
 
   get 'products/create'
+  post 'products/create'
 
   get 'products/update'
 

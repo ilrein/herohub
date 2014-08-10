@@ -1,0 +1,22 @@
+<br><br>
+<% @pos.each do |po| %>
+<div class='ui message'>
+  <div class='header'>
+    Purchase Order # <%= po.id %>
+  </div> 
+  Supplier: <%= po.my_supplier(po.supplier_id) %><br>
+  <div class='ui header'>
+    Product(s):
+  </div> 
+  <% po.orders.each do |order| %>
+  <div class='ui segment teal'>
+    Name: <%= order.my_product(order.product_id) %><br>
+    Classification: <%= order.my_product_classification(order.product_id) %><br>
+    Quantity: <%= order.quantity %><br>
+    <div class='ui divider horizontal icon'>
+      <%= semantic_icon('level down') %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

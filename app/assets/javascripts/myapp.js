@@ -1,5 +1,30 @@
 var ready;
 
+activeItem = function() {
+  var pathname = window.location.pathname;
+  console.log(pathname);
+
+  if (pathname == '/locations/index') {
+    $('#locations_list').addClass('active');
+  };
+
+  if (pathname == '/products/index') {
+    $('#products_list').addClass('active');
+  };
+
+  if (pathname == '/') {
+    $('#login').addClass('active');
+  };
+
+  if (pathname == '/orders/new') {
+    $('#place_single_order').addClass('active');
+  };
+
+  if (pathname == '/orders/po') {
+    $('#all_pos').addClass('active');
+  };
+};
+
 addToList = function() {
 
   $('.orderUp').on('click', function(){
@@ -21,7 +46,7 @@ getAllProducts = function() {
 
 getAllTooltips = function() {
   $('.orderUp').qtip({
-    content: 'Generate a new order with +1 of this item',
+    content: 'Check out my details',
     show: 'mouseover',
     hide: 'mouseout'
   });
@@ -32,11 +57,47 @@ getAllTooltips = function() {
     hide: 'mouseout'
   });
 
+  $('.newProduct').qtip({
+    content: 'Add a new product',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('.logoutButton').qtip({
+    content: 'Logout!',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+
+  checkMyId = function() {
+
+    var myId = $('.orderId').attr('id');
+    var myId2 = $('.location').attr('id');
+
+    $('.orderId').qtip({
+      content: myId,
+      show: 'mouseover',
+      hide: 'mouseout'
+    });
+
+    $('.location').qtip({
+      content: myId2,
+      show: 'mouseover',
+      hide: 'mouseout'
+    });
+
+  };
+
+
+
 }
 
 ready = function() {
 
-  getAllTooltips();  
+  getAllTooltips();
+  checkMyId(); 
+  activeItem(); 
 
   //slide the sidebar on click
 
@@ -47,6 +108,7 @@ ready = function() {
   $(document).on('click', '.preventme', function(e){
     e.preventDefault();
     getAllProducts();
+    getAllTooltips();
   });
 
 }

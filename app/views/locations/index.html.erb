@@ -1,11 +1,17 @@
-<h1>Locations#index</h1>
+<h1 class='title'>Locations#index</h1>
 <%= link_to locations_new_path do %>
-<div class='ui mini button'>
-	Add new location
+<div class='ui mini button teal'>
+	<%= semantic_icon(:building) %>
+  New location
 </div>
 <% end %>
 <div class='ui segment'>
 <% @locations.each do |location| %>
-	<%= location.address %><br>
+	<div class='ui mini button blue'>
+  <%= link_to locations_show_path(location) do %>
+  <%= semantic_icon(:briefcase) %>Details
+  </div>
+  <% end %>
+  <div class='location' id='<%= location.id %>'><%= location.address %></div><br><br>
 <% end %>
 </div>

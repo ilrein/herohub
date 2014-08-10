@@ -1,5 +1,11 @@
 <br><br>
+
 <div class='title'>
-List of all products:
+  <%= link_to products_new_path do %>
+  <div class='ui mini button blue newProduct'>
+    <%= semantic_icon(:add) %> New
+  </div>
+  <% end %>
+  List of all products:
 </div> 
 <%= render 'product' %>

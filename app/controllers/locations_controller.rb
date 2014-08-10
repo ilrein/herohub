@@ -8,9 +8,10 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = Location.create(location_params)    
-
+    @company = Company.find_by current_user.company_id
+    @location = Location.new(location_params)  
     if @location.save
+      @location.update_column(:company_id, @company)
       redirect_to root_url
     else
       redirect_to locations_index_path
