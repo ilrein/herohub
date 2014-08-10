@@ -63,6 +63,13 @@ getAllTooltips = function() {
     hide: 'mouseout'
   });
 
+  $('.logoutButton').qtip({
+    content: 'Logout!',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+
   checkMyId = function() {
 
     var myId = $('.orderId').attr('id');

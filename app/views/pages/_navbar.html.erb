@@ -6,8 +6,11 @@
 
  <div class='smedia logo'><%= semantic_icon('facebook basic') %></div>
  <div class='smedia logo'><%= semantic_icon('twitter basic') %></div>
- <div class='smedia logo'>
+ <div class='smedia logo logoutButton'>
   <% if current_user %> 
+  <%= link_to destroy_user_session_path, :method => :delete do %>
+  <%= semantic_icon('remove sign') %>
+  <% end %>
   <%= current_user.email %>
   <% end %>
 </div>
