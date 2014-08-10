@@ -24,7 +24,7 @@ activeItem = function() {
     $('#place_single_order').addClass('active');
   };
 
-  if (pathname == '/pos') {
+  if (pathname == '/orders/po') {
     $('#all_pos').addClass('active');
   };
 };
