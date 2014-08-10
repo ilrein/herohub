@@ -1,12 +1,23 @@
 <br><br>
 <div class='ui segment thin'>
-	<div class='ui button'>
 	<% if !current_user %>
 	<%= link_to new_user_session_path do %>
 	<%= semantic_icon('key') %> Login
 	<% end %>
 	<% else %>
-	<%= link_to "Continue", products_index_path %>
-	<% end %>
-	</div>
+  <div class='ui button' id='barcode'>
+    <%= link_to products_index_path do %>
+    <%= semantic_icon('barcode') %>
+    <% end %>
+  </div>
+  <div class='ui button' id='flag'>  <%= link_to locations_index_path do %>
+    <%= semantic_icon('flag') %>
+    <% end %>
+  </div> 
+  <div class='ui button' id='cart'><%= link_to pos_path do %>
+    <%= semantic_icon('shopping cart') %>
+    <% end %> 
+  </div>
+  <% end %>
+</div>
 </div>

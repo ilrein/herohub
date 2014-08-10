@@ -69,6 +69,27 @@ getAllTooltips = function() {
     hide: 'mouseout'
   });
 
+  var ids = [];
+
+  $('#barcode').qtip({
+    content: 'Products',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('#cart').qtip({
+    content: 'Locations',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+  $('#flag').qtip({
+    content: 'Purchase Orders',
+    show: 'mouseover',
+    hide: 'mouseout'
+  });
+
+
 
   checkMyId = function() {
 
