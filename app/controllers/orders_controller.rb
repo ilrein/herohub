@@ -7,8 +7,8 @@ class OrdersController < ApplicationController
     @po = Po.new
   end
   def create
-
     @po = Po.new(order_params)
+    #binding.pry
     if @po.save
       redirect_to root_url
     else

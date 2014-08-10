@@ -5,7 +5,7 @@
   <%= f.label 'Supplier id:' %>
   <%= f.text_field :supplier_id %>
   <%= f.fields_for :orders do |order_form| %>
-  Product id: <%= order_form.text_field :product %><br>
+  Product id: <%= order_form.text_field :product_id %><br>
   Quantity: <%= order_form.text_field :quantity %>
   <% end %>
   <div class='colorme'>
