@@ -1,8 +1,12 @@
 class LocationsController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-    @locations = Location.where(current_user.company)
+    if params[:search].present?
+      @locations = Location.near(params[:search], 50, :order => :distance)
+    else
+      @locations = Location.where(current_user.company)
+    end
   end
 
   def new
@@ -16,11 +20,12 @@ before_action :authenticate_user!
     end
 
     @location = Location.new(location_params)  
+    
     if @location.save
       @location.update_column(:company_id, @company)
       redirect_to root_url
     else
-      redirect_to locations_index_path
+      redirect_to locations_path
     end
   end
 
@@ -31,7 +36,14 @@ before_action :authenticate_user!
   end
 
   def show
+    if params[:search].present?
+      @location = Location.find(params[:search])  
+    else
+      
+      @location = Location.find(params[:id])
+    end
   end
+
   private
   def location_params
     params.require(:location).permit(:address)

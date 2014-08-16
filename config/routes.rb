@@ -8,17 +8,7 @@ Rails.application.routes.draw do
   get 'orders/new'
   resources :pos, :controller => 'orders'
   #resources :suppliers, :controller => "orders"
-
-  get 'locations/index'
-  get 'locations/new'
-
-  post 'locations/create'
-
-  get 'locations/update'
-
-  get 'locations/destroy'
-
-  get 'locations/show'
+  resources :locations
 
 
   get 'products/new'

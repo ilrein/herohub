@@ -9,7 +9,7 @@ gem 'rails', '4.1.0'
 gem 'sqlite3'
 gem 'awesome_print'
 gem 'better_errors'
-gem 'byebug'
+gem 'pry-byebug'
 gem 'pry-doc'
 gem 'jquery-qtip2-rails'
 gem 'turbolinks'
@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'therubyracer',  platforms: :ruby
 gem 'devise'
 gem "nested_form"
+gem 'geocoder'
 
 gem 'semantic-ui-sass', '~> 0.16.1.0'
 gem 'quiet_assets'

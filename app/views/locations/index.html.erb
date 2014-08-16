@@ -1,5 +1,11 @@
 <h1 class='title'>Locations#index</h1>
-<%= link_to locations_new_path do %>
+<%= form_tag locations_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search near", :name => nil %>
+  </p>
+<% end %>
+<%= link_to new_location_path do %>
 <div class='ui mini button teal'>
 	<%= semantic_icon(:building) %>
   New
@@ -8,7 +14,7 @@
 <div class='ui segment'>
 <% @locations.each do |location| %>
 	<div class='ui mini button blue'>
-  <%= link_to locations_show_path(location) do %>
+  <%= link_to location_path(location) do %>
   <%= semantic_icon(:briefcase) %>Details
   </div>
   <% end %>
