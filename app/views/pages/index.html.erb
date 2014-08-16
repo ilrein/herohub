@@ -1,26 +1,51 @@
 <br><br>
-<div class='ui segment thin'>
-	<% if !current_user %>
-	 <%= link_to new_user_session_path do %>
-	   <%= semantic_icon('key') %> Login
-    <% end %>
-	<% else %>
-    <%= link_to products_index_path do %>
+<div class='ui divided grid'>
+  <div class='row'>
+    <% if !current_user %>
+      <%= link_to new_user_session_path do %>
+        <%= semantic_icon('key') %> Login
+       <% end %>
+    <% else %>
+    <div class='four wide column ui segment'>
+      <%= link_to products_index_path do %>
       <div class='ui button blue' id='barcode'>
         <%= semantic_icon('barcode') %>
       </div>
-    <% end %>
-    <%= link_to locations_index_path do %>
+      <% end %>
+      <%= link_to locations_index_path do %>
       <div class='ui button blue' id='flag'>  
         <%= semantic_icon('flag') %>
       </div> 
-    <% end %>
-    <%= link_to pos_path do %>
+      <% end %>
+      <%= link_to pos_path do %>
       <div class='ui button blue' id='cart'>
         <%= semantic_icon('shopping cart') %>
       </div>
-    <% end %> 
-  <% end %>
-
-</div>
+      <% end %>
+      <% end %>
+    </div>
+    <div class='four wide column floated left ui info message blue stackable'>
+    Welcome to ItemShoppe: inventory management across shops!
+    </div>
+    <div class='four wide column floated right ui infor message green stackable'>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class='four wide column floated right ui infor message green stackable'>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </div>
 </div>
